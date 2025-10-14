@@ -1,51 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Personal Website of Narmin Rahimli">
-    <meta name="author" content="Narmin Rahimli">
-    <title>Contact me</title>
-    <link rel="icon" type="image/png" href="images\favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📞 Contact Me</title>
+    <link rel="icon" type="image/png" href="images\favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .contact-form {
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-form label {
+            float: left;
+            width: 30%;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            float: left;
+            width: 65%;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="submit"],
+        .contact-form input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            margin: 10px 5px 0 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #0077cc;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            float: left;
+        }
+
+        .contact-form input[type="submit"]:hover,
+        .contact-form input[type="reset"]:hover {
+            background-color: #005fa3;
+        }
+
+        
+        .contact-form::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        
+        @media (max-width: 768px) {
+            .contact-form label,
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea,
+            .contact-form input[type="submit"],
+            .contact-form input[type="reset"] {
+                float: none;
+                width: 100%;
+            }
+
+            .contact-form input[type="submit"],
+            .contact-form input[type="reset"] {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <h1><i>Narmin Rahimli</i></h1>
-        <nav>
-            <a href="index.html">🏠 Home</a> |
-            <a href="education.html">🎓 Education</a> |
-            <a href="schedule.html">📅 Weekly Schedule</a> |
-            <a href="contact.html">✉️ Contact Me</a>
-        </nav>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-inner">
+                <a href="index.html">🏠 Home</a>
+                <a href="education.html">🎓 Education</a>
+                <a href="schedule.html">📅 Schedule</a>
+                <a href="contact.html" class="active">📞 Contact Me</a>
+                <a href="gallery.html">🖼️ Gallery</a>
+            </div>
+        </header>
 
-    </header>
-
-    <main>
-        <section>
+        <main>
+            <h2>📞 Contact Me</h2>
             <p>Send me a message using the form below:</p>
 
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+            <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="40"
-                    placeholder="Write your message here..."></textarea><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea><br>
 
                 <input type="submit" value="Send">
                 <input type="reset" value="Clear">
             </form>
-        </section>
+        </main>
 
-    </main>
-
-    <footer>
-        <p>© 2025 Narmin Rahimli 🌍</p>
-    </footer>
+        <footer>
+            <hr>
+            <p>© 2025 Narmin Rahimli 🌍</p>
+        </footer>
+    </div>
 </body>
-
 </html>

@@ -3,94 +3,198 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Personal Website of Narmin Rahimli">
-    <meta name="author" content="Narmin Rahimli">
-    <title>Weekly Schedule</title>
-    <link rel="icon" type="image/png" href="images\favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Weekly Schedule</title>
+    <link rel="icon" type="image/png" href="images\favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .schedule-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077cc;
+            margin-bottom: 25px;
+        }
+
+        .schedule-flex {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .row {
+            display: flex;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .row.header {
+            background: #0077cc;
+            color: white;
+            font-weight: 600;
+        }
+
+        .cell {
+            flex: 1;
+            text-align: center;
+            padding: 15px 8px;
+            font-size: 15px;
+        }
+
+        .time {
+            flex: 0 0 140px;
+            background-color: #e8f4ff;
+            font-weight: 600;
+            color: #004d80;
+        }
+
+        .day {
+            border-left: 1px solid #e3e3e3;
+            background-color: #fefefe;
+            
+        }
+
+        .row.header .time {
+            background: #005fa3;
+            color: #fff;
+        }
+
+        .day:hover {
+            background-color: #f3faff;
+            transition: background-color 0.3s ease;
+        }
+
+        .weekend {
+            background-color: #f9fcff;
+            color: #0077cc;
+            font-style: italic;
+        }
+
+        .row.header .day {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            color:  #0077cc;
+        }
+
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .time {
+                flex: 1;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+
+
 </head>
 
 <body>
-    <header>
-        <h1><i>Narmin Rahimli</i></h1>
-        <nav>
-            <a href="index.html">🏠 Home</a> |
-            <a href="education.html">🎓 Education</a> |
-            <a href="schedule.html">📅 Weekly Schedule</a> |
-            <a href="contact.html">✉️ Contact Me</a>
-        </nav>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-inner">
+                <a href="index.html">🏠 Home</a>
+                <a href="education.html">🎓 Education</a>
+                <a href="schedule.html" class="active">📅 Schedule</a>
+                <a href="contact.html">📞 Contact Me</a>
+                <a href="gallery.html">🖼️ Gallery</a>
+            </div>
+        </header>
 
-    </header>
+        <main>
+            <div class="schedule-container">
+                <h2>📅 Weekly Schedule</h2>
 
-    <main>
-        <h2>📅 My Weekly Schedule</h2>
+                <div class="schedule-flex">
+                    <div class="row header">
+                        <div class="cell time">Time</div>
+                        <div class="cell day">Monday</div>
+                        <div class="cell day">Tuesday</div>
+                        <div class="cell day">Wednesday</div>
+                        <div class="cell day">Thursday</div>
+                        <div class="cell day">Friday</div>
+                        <div class="cell day weekend">Saturday</div>
+                        <div class="cell day weekend">Sunday</div>
+                    </div>
 
-        <table border="1" cellpadding="5">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th colspan="2">Weekend</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>10:00 - 11:15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Entrepreneurship</td>
-                    <td colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>11:30 - 12:45</td>
-                    <td></td>
-                    <td>History of Azerbaijan</td>
-                    <td>Database Systems</td>
-                    <td>History of Azerbaijan</td>
-                    <td>Database Systems</td>
-                    <td colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>13:00 - 14:15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Entrepreneurship</td>
-                    <td colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>14:30 - 15:45</td>
-                    <td>Probability & Statistics</td>
-                    <td>Introduction to Computer Networks</td>
-                    <td></td>
-                    <td>Introduction to Computer Networks</td>
-                    <td>Probability & Statistics</td>
-                    <td colspan="2"></td>
-                </tr>
-                <tr>
-                    <td>16:00 - 17:15</td>
-                    <td></td>
-                    <td>Web & Mobile I</td>
-                    <td></td>
-                    <td>Web & Mobile I</td>
-                    <td></td>
-                    <td colspan="2"></td>
-                </tr>
-            </tbody>
-        </table>
+                    <div class="row">
+                        <div class="cell time">10:00 - 11:15</div>
+                        <div class="cell day"></div>
+                        <div class="cell day"></div>
+                        <div class="cell day"></div>
+                        <div class="cell day"></div>
+                        <div class="cell day">Entrepreneurship</div>
+                        <div class="cell day weekend"></div>
+                        <div class="cell day weekend"></div>
+                    </div>
 
+                    <div class="row">
+                        <div class="cell time">11:30 - 12:45</div>
+                        <div class="cell day"></div>
+                        <div class="cell day">History of Azerbaijan</div>
+                        <div class="cell day">Database Systems</div>
+                        <div class="cell day">History of Azerbaijan</div>
+                        <div class="cell day">Database Systems</div>
+                        <div class="cell day weekend"></div>
+                        <div class="cell day weekend"></div>
+                    </div>
 
-    </main>
+                    <div class="row">
+                        <div class="cell time">13:00 - 14:15</div>
+                        <div class="cell day"></div>
+                        <div class="cell day"></div>
+                        <div class="cell day"></div>
+                        <div class="cell day"></div>
+                        <div class="cell day">Entrepreneurship</div>
+                        <div class="cell day weekend"></div>
+                        <div class="cell day weekend"></div>
+                    </div>
 
-    <footer>
-        <p>© 2025 Narmin Rahimli 🌍</p>
-    </footer>
+                    <div class="row">
+                        <div class="cell time">14:30 - 15:45</div>
+                        <div class="cell day">Probability & Statistics</div>
+                        <div class="cell day">Intro to Computer Networks</div>
+                        <div class="cell day"></div>
+                        <div class="cell day">Intro to Computer Networks</div>
+                        <div class="cell day">Probability & Statistics</div>
+                        <div class="cell day weekend"></div>
+                        <div class="cell day weekend"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell time">16:00 - 17:15</div>
+                        <div class="cell day"></div>
+                        <div class="cell day">Web & Mobile I</div>
+                        <div class="cell day"></div>
+                        <div class="cell day">Web & Mobile I</div>
+                        <div class="cell day"></div>
+                        <div class="cell day weekend"></div>
+                        <div class="cell day weekend"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            <p>© 2025 Narmin Rahimli 🌍</p>
+        </footer>
+    </div>
 </body>
 
 </html>
