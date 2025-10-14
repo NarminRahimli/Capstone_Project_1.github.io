@@ -44,7 +44,7 @@ This project serves as:
 ---
 
 ##  Live Website
- **[View My Website on GitHub Pages](https://github.com/NarminRahimli/Capstone_Project_1)**
+ **[View My Website on GitHub Pages](https://narminrahimli.github.io/Capstone_Project_1.github.io/)**
 
 
 
